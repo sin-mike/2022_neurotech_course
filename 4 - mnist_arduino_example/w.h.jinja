@@ -1,0 +1,20 @@
+#ifndef W_H
+#define W_H
+
+#define N_CHANNELS {{N_CHANNELS}}
+#define N_CLASSES {{N_CLASSES}}
+#define N_HIDDEN {{N_HIDDEN}}
+#define ACTIVATION_THRESH {{ACTIVATION_THRESH}}
+#define ALPHA_ACTIVATIONS {{ALPHA_ACTIVATIONS}}
+
+extern const float rnn_in_w[N_CHANNELS][N_HIDDEN];
+
+extern const float rnn_h_w[N_HIDDEN][N_HIDDEN] ;
+
+extern const float rnn_b[N_HIDDEN] ;
+
+extern const float head_w[N_HIDDEN][N_CLASSES] ;
+
+extern const float head_b[N_CLASSES] ;
+
+#endif

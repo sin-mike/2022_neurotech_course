@@ -1,0 +1,6 @@
+#include "data.h"
+#include <avr/pgmspace.h>
+
+const byte data[N_CHANNELS][DATA_LEN] PROGMEM = { {% for r in DATA %}{
+{% for rr in r %}{{rr}}{{", " if not loop.last else ""}}{% endfor %}
+}{{", " if not loop.last else ""}}{% endfor %} };

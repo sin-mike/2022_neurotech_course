@@ -1,0 +1,23 @@
+#include "w.h"
+
+#include <avr/pgmspace.h>
+
+const float rnn_in_w[N_CHANNELS][N_HIDDEN] PROGMEM = { {% for r in rnn_in_w %}{
+{% for rr in r %}{{rr.round(5)}}{{", " if not loop.last else ""}}{% endfor %}
+}{{", " if not loop.last else ""}}{% endfor %} };
+
+const float rnn_h_w[N_HIDDEN][N_HIDDEN] PROGMEM = { {% for r in rnn_h_w %}{
+{% for rr in r %}{{rr.round(5)}}{{", " if not loop.last else ""}}{% endfor %}
+}{{", " if not loop.last else ""}}{% endfor %} };
+
+const float rnn_b[N_HIDDEN] PROGMEM = {
+{% for r in rnn_b %}{{r.round(5)}}{{", " if not loop.last else ""}}{% endfor %}
+};
+
+const float head_w[N_HIDDEN][N_CLASSES] PROGMEM = { {% for r in head_w %}{
+{% for rr in r %}{{rr.round(5)}}{{", " if not loop.last else ""}}{% endfor %}
+}{{", " if not loop.last else ""}}{% endfor %} };
+
+const float head_b[N_CLASSES] PROGMEM = {
+{% for r in head_b %}{{r.round(5)}}{{", " if not loop.last else ""}}{% endfor %}
+};
