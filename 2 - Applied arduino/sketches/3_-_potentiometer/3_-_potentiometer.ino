@@ -8,7 +8,7 @@ void loop() {
   int pot = analogRead(A4);
   Serial.println(pot);
 
-  delay(50);
+  delay(10);
   // put your main code here, to run repeatedly:
 
 }

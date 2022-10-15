@@ -7,8 +7,8 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-  //  Serial.println("Hello world");
-  //  Serial.print("Hello world\r\n");
+//    Serial.println("Hello world");
+//    Serial.print("Hello world");
 
   const uint8_t s[11] = {72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100};
   for (int i = 0; i<11; i++){
