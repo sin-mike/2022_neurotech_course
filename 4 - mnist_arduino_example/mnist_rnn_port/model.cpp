@@ -64,6 +64,7 @@ void model_call(float x[N_CHANNELS], float y[N_CLASSES], HardwareSerial &Serial)
     for (int hi = 0; hi<N_HIDDEN; hi++){
       
         rnn_hidden_prev[hi] = pgm_read_float(&rnn_b[hi]);
+        // rnn_hidden_prev[hi] = rnn_b[hi];
 
         float in_w[N_CHANNELS];
         for (int iw=0; iw<N_CHANNELS; iw++) {
